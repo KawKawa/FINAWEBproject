@@ -1,0 +1,20 @@
+<form (submit)="loginUser($event)" name="myForm" >
+	
+	
+    <div class="input">
+		
+            
+                <label>Username</label>
+                <span class="ui-inputgroup-addon"><i class="fa fa-user"></i></span>
+                <input type="text" pInputText placeholder="Username" name="username" required value="admin" >       
+
+                <label>Password</label>
+
+                <span class="ui-inputgroup-addon"><i class="fa fa-user"></i></span>
+                <input type="password" pInputText placeholder="Password" value="admin">         
+      
+ 
+		<input type="submit" value="Login">
+        <a [routerLink]="['/register']">Register</a>
+	</div>
+</form>

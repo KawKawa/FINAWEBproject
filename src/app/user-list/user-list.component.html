@@ -1,0 +1,46 @@
+
+<div>
+ 
+    
+  
+<table >
+ <thead>
+   <tr><td><font color="#f2f2f2" >Users </font></td></tr>
+   
+  <td>Search for a user :</td><td>
+      <span class="ui-float-label">
+         
+          <span class="ui-inputgroup-addon"><i class="fa fa-search"></i></span>
+          <input type="text" pInputText placeholder="Name" [(ngModel)]='filter' >  
+          <!--<label for="float-input">{{filter}}</label>-->
+      </span>
+    </td>
+  <tr>
+    <!--<th><button (click)='toggleimg()' >{{Showimguser ? 'Hide' : 'Show'}}  user </button></th>-->
+    <th>Number </th>
+    <th>Username</th>
+    <th>Name</th>
+    <th>Type</th>
+    <th>Role</th>
+    <th>Groupe</th>
+    
+  </tr>
+</thead>
+  <tbody>
+    <tr *ngFor='let u of listeusers | userfilter:filter' >
+      <!--<td ><img *ngIf='Showimguser' [src]="u.userimageurl" 
+        [style.width.px]="imgwidth" 
+        [style.margin.px]="igmmargin"
+        /></td>-->
+      <td>{{u.userid}} </td>
+      <td>{{u.username }}</td>
+      <td>{{u.name }}</td> 
+      <td>******</td>
+      <td>******</td> 
+      <td>******</td>
+    </tr>
+  </tbody>
+  
+   </table>
+
+  </div>

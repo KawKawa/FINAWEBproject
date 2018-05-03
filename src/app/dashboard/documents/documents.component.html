@@ -1,0 +1,16 @@
+<p-treeTable selectionMode="single"  [style]="{'margin-top':'50px'}" >
+    <p-column field="name" header="Name"></p-column>
+    <p-column field="size" header="Size"></p-column>
+    <p-column field="type" header="Type"></p-column>
+  
+</p-treeTable>
+<h3 class="first">Upload</h3>
+<p-fileUpload name="demo[]" url="./upload.php" (onUpload)="onUpload($event)" 
+        multiple="multiple" accept="image/*" maxFileSize="1000000">
+    <ng-template pTemplate="content">
+        <ul *ngIf="uploadedFiles.length">
+            <li *ngFor="let file of uploadedFiles">{{file.name}} - {{file.size}} bytes</li>
+        </ul>
+    </ng-template>        
+</p-fileUpload>
+<p-fileUpload name="myfile[]" url="./upload.php"></p-fileUpload>
